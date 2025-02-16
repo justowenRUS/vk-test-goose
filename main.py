@@ -20,7 +20,7 @@ def launch_game():
         with winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"SOFTWARE\WOW6432Node\Valve\Steam") as key:
             winreg.QueryValueEx(key, "InstallPath")
             print("Установка (если нужно) и запуск Goose Goose Duck...")
-            webbrowser.open("steam://install/1568590")
+            webbrowser.open("steam://install/1568590") #берем id с сайта steamdb
             webbrowser.open("steam://run/1568590")
     except Exception:
         print("Steam не найден. Убедитесь, что он установлен.")
